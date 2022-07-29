@@ -1,11 +1,11 @@
 import "./App.css";
-import { useState } from "react";
+// import { useState } from "react";
 import micn from "./micn.json";
 import wltcclass1 from "./wltcclass1.json";
 import wltcclass2 from "./wltcclass2.json";
 
 // import { ReactQueryDevtools } from "react-query/devtools";
-import styled from "styled-components";
+
 // import StartupAddmore from "./components/startupAddmore";
 import {
   LineChart,
@@ -189,9 +189,6 @@ export default App;
 
 //   return req.json();
 // }
-const StyledButton = styled.button`
-  padding: 1rem !important;
-`;
 // useEffect(async () => {
 //   var req = await fetch("http://localhost:3002/giri");
 //   console.log(req);
