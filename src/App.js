@@ -1,21 +1,9 @@
 import "./App.css";
-import TempCel from "./components/cel/tempcel";
-import TempFar from "./components/temfar";
-import { useEffect, useState, useRef } from "react";
-import Session from "./components/session";
-import { PersistGate } from "redux-persist/integration/react";
-import store from "./store/store";
-import { useSelector, useDispatch, Provider } from "react-redux";
-import {
-  useQuery,
-  QueryClient,
-  QueryClientProvider,
-  useMutation,
-} from "react-query";
+import { useState } from "react";
 import micn from "./micn.json";
 import wltcclass1 from "./wltcclass1.json";
 import wltcclass2 from "./wltcclass2.json";
-import Logo from "./logo.svg";
+
 // import { ReactQueryDevtools } from "react-query/devtools";
 import styled from "styled-components";
 // import StartupAddmore from "./components/startupAddmore";
@@ -23,25 +11,19 @@ import {
   LineChart,
   Line,
   XAxis,
-  Label,
   YAxis,
-  CartesianGrid,
-  LabelList,
   Tooltip,
-  Legend,
   ResponsiveContainer,
-  Text,
-  Brush,
 } from "recharts";
 
 function App() {
-  const obj1 = micn.toString();
-  console.log(micn);
-  const [tempCel, setTempCel] = useState(0);
-  const [tempFar, setTempFar] = useState(0);
-  const [message, setMessage] = useState({ name: "giri", age: 34 });
+  // const obj1 = micn.toString();
+  // console.log(micn);
+  // const [tempCel, setTempCel] = useState(0);
+  // const [tempFar, setTempFar] = useState(0);
+  // const [message, setMessage] = useState({ name: "giri", age: 34 });
 
-  const [selectedFile, setSelectedFile] = useState();
+  // const [selectedFile, setSelectedFile] = useState();
 
   return (
     <div style={{ width: "100%", height: "500px" }}>
