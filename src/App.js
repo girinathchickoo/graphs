@@ -48,7 +48,7 @@ function App() {
               stroke="blue"
               strokeWidth={1}
               dot={false}
-              animationDuration={5000}
+              animationDuration={550000}
             ></Line>
           </LineChart>
         </ResponsiveContainer>
@@ -89,7 +89,7 @@ function App() {
               stroke="blue"
               strokeWidth={1}
               dot={false}
-              animationDuration={5000}
+              animationDuration={550000}
             ></Line>
           </LineChart>
         </ResponsiveContainer>
@@ -130,7 +130,7 @@ function App() {
               stroke="blue"
               strokeWidth={1}
               dot={false}
-              animationDuration={5000}
+              animationDuration={550000}
             ></Line>
           </LineChart>
         </ResponsiveContainer>
