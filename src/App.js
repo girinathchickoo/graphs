@@ -45,10 +45,10 @@ function App() {
               onAnimationStart={(e, val) => {}}
               type="monotone"
               dataKey="Speed (kmph)"
-              stroke="blue"
-              strokeWidth={1}
+              stroke="red"
+              strokeWidth={2}
               dot={false}
-              animationDuration={550000}
+              animationDuration={1180000}
             ></Line>
           </LineChart>
         </ResponsiveContainer>
@@ -86,10 +86,10 @@ function App() {
               onAnimationStart={(e, val) => {}}
               type="monotone"
               dataKey="Speed (kmph)"
-              stroke="blue"
-              strokeWidth={1}
+              stroke="red"
+              strokeWidth={2}
               dot={false}
-              animationDuration={550000}
+              animationDuration={1022000}
             ></Line>
           </LineChart>
         </ResponsiveContainer>
@@ -127,10 +127,10 @@ function App() {
               onAnimationStart={(e, val) => {}}
               type="monotone"
               dataKey="Speed (kmph)"
-              stroke="blue"
-              strokeWidth={1}
+              stroke="red"
+              strokeWidth={2}
               dot={false}
-              animationDuration={550000}
+              animationDuration={1477000}
             ></Line>
           </LineChart>
         </ResponsiveContainer>
