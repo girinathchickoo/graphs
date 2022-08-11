@@ -3,6 +3,9 @@ import "./App.css";
 import micn from "./micn.json";
 import wltcclass1 from "./wltcclass1.json";
 import wltcclass2 from "./wltcclass2.json";
+import ShareBtn from "chrome-web-share";
+// import "chrome-web-share/dist/ShareBtn";
+import { BUTTON_TYPES } from "chrome-web-share";
 
 // import { ReactQueryDevtools } from "react-query/devtools";
 
@@ -26,126 +29,142 @@ function App() {
   // const [selectedFile, setSelectedFile] = useState();
 
   return (
-    <div style={{ width: "100%", height: "500px" }}>
-      <div style={{ width: "100%", height: "500px" }}>
-        <h1 style={{ textAlign: "center" }}>MIDC</h1>
-        <span>Speed (kmph)</span>{" "}
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart tickLine={false} width={300} height={500} data={micn}>
-            <XAxis dataKey="Time (s)"></XAxis>
-            <YAxis dataKey="Speed (kmph)" />
+    <>
+      {/* <div style={{ width: "100%", height: "500px" }}>
+        <div style={{ width: "100%", height: "500px" }}>
+          <h1 style={{ textAlign: "center" }}>MIDC</h1>
+          <span>Speed (kmph)</span>{" "}
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart tickLine={false} width={300} height={500} data={micn}>
+              <XAxis dataKey="Time (s)"></XAxis>
+              <YAxis dataKey="Speed (kmph)" />
 
-            <Tooltip
-              active
-              style={{ display: "block" }}
-              content={<CustomTooltip />}
-            />
+              <Tooltip
+                active
+                style={{ display: "block" }}
+                content={<CustomTooltip />}
+              />
 
-            <Line
-              onAnimationStart={(e, val) => {}}
-              type="monotone"
-              dataKey="Speed (kmph)"
-              stroke="red"
-              strokeWidth={2}
-              dot={false}
-              animationDuration={1180000}
-            ></Line>
-          </LineChart>
-        </ResponsiveContainer>
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          Time (s)
-        </div>
-      </div>
-      <div style={{ width: "100%", height: "500px", marginTop: "200px" }}>
-        <h1 style={{ textAlign: "center" }}>WLTCClass1</h1>
-        <span>Speed (kmph)</span>{" "}
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            tickLine={false}
-            width={300}
-            height={500}
-            data={wltcclass1}
+              <Line
+                onAnimationStart={(e, val) => {}}
+                type="monotone"
+                dataKey="Speed (kmph)"
+                stroke="red"
+                strokeWidth={2}
+                dot={false}
+                animationDuration={1180000}
+              ></Line>
+            </LineChart>
+          </ResponsiveContainer>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
-            <XAxis dataKey="Time (s)"></XAxis>
-            <YAxis dataKey="Speed (kmph)" />
-
-            <Tooltip
-              active
-              style={{ display: "block" }}
-              content={<CustomTooltip />}
-            />
-
-            <Line
-              onAnimationStart={(e, val) => {}}
-              type="monotone"
-              dataKey="Speed (kmph)"
-              stroke="red"
-              strokeWidth={2}
-              dot={false}
-              animationDuration={1022000}
-            ></Line>
-          </LineChart>
-        </ResponsiveContainer>
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          Time (s)
+            Time (s)
+          </div>
         </div>
-      </div>
-      <div style={{ width: "100%", height: "500px", marginTop: "200px" }}>
-        <h1 style={{ textAlign: "center" }}>WLTCClass2</h1>
-        <span>Speed (kmph)</span>{" "}
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
-            tickLine={false}
-            width={300}
-            height={500}
-            data={wltcclass2}
+        <div style={{ width: "100%", height: "500px", marginTop: "200px" }}>
+          <h1 style={{ textAlign: "center" }}>WLTCClass1</h1>
+          <span>Speed (kmph)</span>{" "}
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart
+              tickLine={false}
+              width={300}
+              height={500}
+              data={wltcclass1}
+            >
+              <XAxis dataKey="Time (s)"></XAxis>
+              <YAxis dataKey="Speed (kmph)" />
+
+              <Tooltip
+                active
+                style={{ display: "block" }}
+                content={<CustomTooltip />}
+              />
+
+              <Line
+                onAnimationStart={(e, val) => {}}
+                type="monotone"
+                dataKey="Speed (kmph)"
+                stroke="red"
+                strokeWidth={2}
+                dot={false}
+                animationDuration={1022000}
+              ></Line>
+            </LineChart>
+          </ResponsiveContainer>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
           >
-            <XAxis dataKey="Time (s)"></XAxis>
-            <YAxis dataKey="Speed (kmph)" />
-
-            <Tooltip
-              active
-              style={{ display: "block" }}
-              content={<CustomTooltip />}
-            />
-
-            <Line
-              onAnimationStart={(e, val) => {}}
-              type="monotone"
-              dataKey="Speed (kmph)"
-              stroke="red"
-              strokeWidth={2}
-              dot={false}
-              animationDuration={1477000}
-            ></Line>
-          </LineChart>
-        </ResponsiveContainer>
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          Time (s)
+            Time (s)
+          </div>
         </div>
-      </div>
-    </div>
+        <div style={{ width: "100%", height: "500px", marginTop: "200px" }}>
+          <h1 style={{ textAlign: "center" }}>WLTCClass2</h1>
+          <span>Speed (kmph)</span>{" "}
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart
+              tickLine={false}
+              width={300}
+              height={500}
+              data={wltcclass2}
+            >
+              <XAxis dataKey="Time (s)"></XAxis>
+              <YAxis dataKey="Speed (kmph)" />
+
+              <Tooltip
+                active
+                style={{ display: "block" }}
+                content={<CustomTooltip />}
+              />
+
+              <Line
+                onAnimationStart={(e, val) => {}}
+                type="monotone"
+                dataKey="Speed (kmph)"
+                stroke="red"
+                strokeWidth={2}
+                dot={false}
+                animationDuration={1477000}
+              ></Line>
+            </LineChart>
+          </ResponsiveContainer>
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            Time (s)
+          </div>
+        </div>
+      </div> */}
+      {/* <ShareBtn
+        shareUrl={"https://zelta.io"}
+        disabled={["whatsApp"]}
+        shareText={"girinath"}
+        className="my-class-name"
+        buttonText="Share Profile"
+      /> */}
+      <button
+        onClick={() => {
+          navigator.share({ url: "https://zelta.io" });
+        }}
+      >
+        share
+      </button>
+    </>
   );
 }
 
