@@ -1,23 +1,20 @@
 import "./App.css";
 // import { useState } from "react";
-// import micn from "./micn.json";
-// import wltcclass1 from "./wltcclass1.json";
-// import wltcclass2 from "./wltcclass2.json";
-// import ShareBtn from "chrome-web-share";
-// // import "chrome-web-share/dist/ShareBtn";
-// import { BUTTON_TYPES } from "chrome-web-share";
+import micn from "./micn.json";
+import wltcclass1 from "./wltcclass1.json";
+import wltcclass2 from "./wltcclass2.json";
 
 // import { ReactQueryDevtools } from "react-query/devtools";
 
 // import StartupAddmore from "./components/startupAddmore";
-// import {
-//   LineChart,
-//   Line,
-//   XAxis,
-//   YAxis,
-//   Tooltip,
-//   ResponsiveContainer,
-// } from "recharts";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 function App() {
   // const obj1 = micn.toString();
@@ -29,170 +26,154 @@ function App() {
   // const [selectedFile, setSelectedFile] = useState();
 
   return (
-    <>
-      {/* <div style={{ width: "100%", height: "500px" }}>
-        <div style={{ width: "100%", height: "500px" }}>
-          <h1 style={{ textAlign: "center" }}>MIDC</h1>
-          <span>Speed (kmph)</span>{" "}
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart tickLine={false} width={300} height={500} data={micn}>
-              <XAxis dataKey="Time (s)"></XAxis>
-              <YAxis dataKey="Speed (kmph)" />
+    <div style={{ width: "100%", height: "500px" }}>
+      <div style={{ width: "100%", height: "500px" }}>
+        <h1 style={{ textAlign: "center" }}>MIDC</h1>
+        <span>Speed (kmph)</span>{" "}
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart tickLine={false} width={300} height={500} data={micn}>
+            <XAxis dataKey="Time (s)"></XAxis>
+            <YAxis dataKey="Speed (kmph)" />
 
-              <Tooltip
-                active
-                style={{ display: "block" }}
-                content={<CustomTooltip />}
-              />
+            <Tooltip
+              active
+              style={{ display: "block" }}
+              content={<CustomTooltip />}
+            />
 
-              <Line
-                onAnimationStart={(e, val) => {}}
-                type="monotone"
-                dataKey="Speed (kmph)"
-                stroke="red"
-                strokeWidth={2}
-                dot={false}
-                animationDuration={1180000}
-              ></Line>
-            </LineChart>
-          </ResponsiveContainer>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            Time (s)
-          </div>
+            <Line
+              onAnimationStart={(e, val) => {}}
+              type="monotone"
+              dataKey="Speed (kmph)"
+              stroke="red"
+              strokeWidth={2}
+              dot={false}
+              animationDuration={1180000}
+            ></Line>
+          </LineChart>
+        </ResponsiveContainer>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Time (s)
         </div>
-        <div style={{ width: "100%", height: "500px", marginTop: "200px" }}>
-          <h1 style={{ textAlign: "center" }}>WLTCClass1</h1>
-          <span>Speed (kmph)</span>{" "}
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart
-              tickLine={false}
-              width={300}
-              height={500}
-              data={wltcclass1}
-            >
-              <XAxis dataKey="Time (s)"></XAxis>
-              <YAxis dataKey="Speed (kmph)" />
-
-              <Tooltip
-                active
-                style={{ display: "block" }}
-                content={<CustomTooltip />}
-              />
-
-              <Line
-                onAnimationStart={(e, val) => {}}
-                type="monotone"
-                dataKey="Speed (kmph)"
-                stroke="red"
-                strokeWidth={2}
-                dot={false}
-                animationDuration={1022000}
-              ></Line>
-            </LineChart>
-          </ResponsiveContainer>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+      </div>
+      <div style={{ width: "100%", height: "500px", marginTop: "200px" }}>
+        <h1 style={{ textAlign: "center" }}>WLTCClass1</h1>
+        <span>Speed (kmph)</span>{" "}
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart
+            tickLine={false}
+            width={300}
+            height={500}
+            data={wltcclass1}
           >
-            Time (s)
-          </div>
+            <XAxis dataKey="Time (s)"></XAxis>
+            <YAxis dataKey="Speed (kmph)" />
+
+            <Tooltip
+              active
+              style={{ display: "block" }}
+              content={<CustomTooltip />}
+            />
+
+            <Line
+              onAnimationStart={(e, val) => {}}
+              type="monotone"
+              dataKey="Speed (kmph)"
+              stroke="red"
+              strokeWidth={2}
+              dot={false}
+              animationDuration={1022000}
+            ></Line>
+          </LineChart>
+        </ResponsiveContainer>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Time (s)
         </div>
-        <div style={{ width: "100%", height: "500px", marginTop: "200px" }}>
-          <h1 style={{ textAlign: "center" }}>WLTCClass2</h1>
-          <span>Speed (kmph)</span>{" "}
-          <ResponsiveContainer width="100%" height="100%">
-            <LineChart
-              tickLine={false}
-              width={300}
-              height={500}
-              data={wltcclass2}
-            >
-              <XAxis dataKey="Time (s)"></XAxis>
-              <YAxis dataKey="Speed (kmph)" />
-
-              <Tooltip
-                active
-                style={{ display: "block" }}
-                content={<CustomTooltip />}
-              />
-
-              <Line
-                onAnimationStart={(e, val) => {}}
-                type="monotone"
-                dataKey="Speed (kmph)"
-                stroke="red"
-                strokeWidth={2}
-                dot={false}
-                animationDuration={1477000}
-              ></Line>
-            </LineChart>
-          </ResponsiveContainer>
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+      </div>
+      <div style={{ width: "100%", height: "500px", marginTop: "200px" }}>
+        <h1 style={{ textAlign: "center" }}>WLTCClass2</h1>
+        <span>Speed (kmph)</span>{" "}
+        <ResponsiveContainer width="100%" height="100%">
+          <LineChart
+            tickLine={false}
+            width={300}
+            height={500}
+            data={wltcclass2}
           >
-            Time (s)
-          </div>
+            <XAxis dataKey="Time (s)"></XAxis>
+            <YAxis dataKey="Speed (kmph)" />
+
+            <Tooltip
+              active
+              style={{ display: "block" }}
+              content={<CustomTooltip />}
+            />
+
+            <Line
+              onAnimationStart={(e, val) => {}}
+              type="monotone"
+              dataKey="Speed (kmph)"
+              stroke="red"
+              strokeWidth={2}
+              dot={false}
+              animationDuration={1477000}
+            ></Line>
+          </LineChart>
+        </ResponsiveContainer>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          Time (s)
         </div>
-      </div> */}
-      {/* <ShareBtn
-        shareUrl={"https://zelta.io"}
-        disabled={["whatsApp"]}
-        shareText={"girinath"}
-        className="my-class-name"
-        buttonText="Share Profile"
-      /> */}
-      <button
-        onClick={() => {
-          navigator.share({ url: "https://zelta.io" });
-        }}
-      >
-        share button
-      </button>
-    </>
+      </div>
+    </div>
   );
 }
 
-// const CustomTooltip = ({ active, payload, label }) => {
-//   console.log(payload, active);
-//   if (active && payload && payload.length) {
-//     return (
-//       <div
-//         style={{
-//           background: "white",
-//           border: "1px solid #000",
-//           padding: "4px",
-//         }}
-//       >
-//         <p className="text-sm font-medium text-text-secondary">{`Time (s): ${
-//           payload[0]?.payload["Time (s)"] ? payload[0]?.payload["Time (s)"] : ""
-//         }`}</p>
-//         <p className="text-sm font-medium text-text-secondary">{`Speed (kmph): ${
-//           payload[0]?.payload["Speed (kmph)"]
-//             ? Math.floor(Number(payload[0]?.payload["Speed (kmph)"]) * 100) /
-//               100
-//             : ""
-//         }`}</p>
-//       </div>
-//     );
-//   }
-//   return null;
-// };
+const CustomTooltip = ({ active, payload, label }) => {
+  console.log(payload, active);
+  if (active && payload && payload.length) {
+    return (
+      <div
+        style={{
+          background: "white",
+          border: "1px solid #000",
+          padding: "4px",
+        }}
+      >
+        <p className="text-sm font-medium text-text-secondary">{`Time (s): ${
+          payload[0]?.payload["Time (s)"] ? payload[0]?.payload["Time (s)"] : ""
+        }`}</p>
+        <p className="text-sm font-medium text-text-secondary">{`Speed (kmph): ${
+          payload[0]?.payload["Speed (kmph)"]
+            ? Math.floor(Number(payload[0]?.payload["Speed (kmph)"]) * 100) /
+              100
+            : ""
+        }`}</p>
+      </div>
+    );
+  }
+  return null;
+};
 
 export default App;
 
