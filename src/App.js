@@ -1,23 +1,23 @@
 import "./App.css";
 // import { useState } from "react";
-import micn from "./micn.json";
-import wltcclass1 from "./wltcclass1.json";
-import wltcclass2 from "./wltcclass2.json";
-import ShareBtn from "chrome-web-share";
-// import "chrome-web-share/dist/ShareBtn";
-import { BUTTON_TYPES } from "chrome-web-share";
+// import micn from "./micn.json";
+// import wltcclass1 from "./wltcclass1.json";
+// import wltcclass2 from "./wltcclass2.json";
+// import ShareBtn from "chrome-web-share";
+// // import "chrome-web-share/dist/ShareBtn";
+// import { BUTTON_TYPES } from "chrome-web-share";
 
 // import { ReactQueryDevtools } from "react-query/devtools";
 
 // import StartupAddmore from "./components/startupAddmore";
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+// import {
+//   LineChart,
+//   Line,
+//   XAxis,
+//   YAxis,
+//   Tooltip,
+//   ResponsiveContainer,
+// } from "recharts";
 
 function App() {
   // const obj1 = micn.toString();
@@ -162,37 +162,37 @@ function App() {
           navigator.share({ url: "https://zelta.io" });
         }}
       >
-        share
+        share button
       </button>
     </>
   );
 }
 
-const CustomTooltip = ({ active, payload, label }) => {
-  console.log(payload, active);
-  if (active && payload && payload.length) {
-    return (
-      <div
-        style={{
-          background: "white",
-          border: "1px solid #000",
-          padding: "4px",
-        }}
-      >
-        <p className="text-sm font-medium text-text-secondary">{`Time (s): ${
-          payload[0]?.payload["Time (s)"] ? payload[0]?.payload["Time (s)"] : ""
-        }`}</p>
-        <p className="text-sm font-medium text-text-secondary">{`Speed (kmph): ${
-          payload[0]?.payload["Speed (kmph)"]
-            ? Math.floor(Number(payload[0]?.payload["Speed (kmph)"]) * 100) /
-              100
-            : ""
-        }`}</p>
-      </div>
-    );
-  }
-  return null;
-};
+// const CustomTooltip = ({ active, payload, label }) => {
+//   console.log(payload, active);
+//   if (active && payload && payload.length) {
+//     return (
+//       <div
+//         style={{
+//           background: "white",
+//           border: "1px solid #000",
+//           padding: "4px",
+//         }}
+//       >
+//         <p className="text-sm font-medium text-text-secondary">{`Time (s): ${
+//           payload[0]?.payload["Time (s)"] ? payload[0]?.payload["Time (s)"] : ""
+//         }`}</p>
+//         <p className="text-sm font-medium text-text-secondary">{`Speed (kmph): ${
+//           payload[0]?.payload["Speed (kmph)"]
+//             ? Math.floor(Number(payload[0]?.payload["Speed (kmph)"]) * 100) /
+//               100
+//             : ""
+//         }`}</p>
+//       </div>
+//     );
+//   }
+//   return null;
+// };
 
 export default App;
 
